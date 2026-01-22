@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+/* <!DOCTYPE html> */
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
@@ -156,7 +156,7 @@
     <footer>
         <p>영광제지 | 사업자등록번호:</p>
         <p>고객센터:  (평일 09:00 ~ 18:00)</p>
-        <div style="margin-top:10px; opacity:0.6;">© 2024 SoftCloud. All rights reserved.</div>
+        <div style="margin-top:10px; opacity:0.6;">©glorypaper. All rights reserved.</div>
     </footer>
 
     <script>
