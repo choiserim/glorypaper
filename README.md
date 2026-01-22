@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SoftCloud | 구름처럼 부드러운 화장지</title>
+    <title> glorypaper| 구름처럼 부드러운 화장지</title>
     <style>
         /* 기본 스타일 */
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -16,7 +16,7 @@
         .logo { font-size: 24px; font-weight: bold; color: #4A90E2; cursor: pointer; }
         nav ul { display: flex; gap: 30px; }
         nav ul li a { font-weight: 500; transition: 0.3s; }
-        nav ul li a:hover, nav ul li a.active { color: #4A90E2; font-weight: bold; }
+        nav ul li a: hover, nav ul li a.active { color: #4A90E2; font-weight: bold; }
 
         /* 섹션 공통 스타일 */
         section { display: none; padding: 80px 5%; min-height: 80vh; }
