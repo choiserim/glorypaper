@@ -154,8 +154,8 @@
     </section>
 
     <footer>
-        <p>(주)소프트클라우드 | 사업자등록번호: 123-45-67890</p>
-        <p>고객센터: 1588-0000 (평일 09:00 ~ 18:00)</p>
+        <p>영광제지 | 사업자등록번호: </p>
+        <p>고객센터: (평일 09:00 ~ 18:00)</p>
         <div style="margin-top:10px; opacity:0.6;">© 2024 SoftCloud. All rights reserved.</div>
     </footer>
 
