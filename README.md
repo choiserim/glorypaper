@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>glorypaper | 친환경 화장지</title>
+    <title>SoftCloud | 구름처럼 부드러운 화장지</title>
     <style>
         /* 기본 스타일 */
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -154,8 +154,8 @@
     </section>
 
     <footer>
-        <p>영광제지 | 사업자등록번호: </p>
-        <p>고객센터: (평일 09:00 ~ 18:00)</p>
+        <p>(주)소프트클라우드 | 사업자등록번호: 123-45-67890</p>
+        <p>고객센터: 1588-0000 (평일 09:00 ~ 18:00)</p>
         <div style="margin-top:10px; opacity:0.6;">© 2024 SoftCloud. All rights reserved.</div>
     </footer>
 
