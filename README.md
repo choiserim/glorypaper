@@ -10,6 +10,37 @@
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
         body { font-family: 'Noto Sans KR', sans-serif; scroll-behavior: smooth; }
         .product-card:hover { transform: translateY(-5px); transition: all 0.3s; }
+       
+        /* 1. 웹브라우저 설정 초기화 (CSS Reset) */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; /* 패딩/테두리가 너비에 포함되도록 설정 */
+        }
+        
+        html {
+            -webkit-text-size-adjust: 100%; /* iOS 폰트 크기 자동 조정 방지 */
+            tab-size: 4;
+        }
+
+        body {
+            line-height: 1.5;
+            font-family: system-ui, -apple-system, sans-serif;
+            -webkit-font-smoothing: antialiased; /* 글꼴 매끄럽게 처리 */
+        }
+
+        /* 테이블 초기화 */
+        table {
+            text-indent: 0;
+            border-color: inherit;
+            border-collapse: collapse;
+        }
+
+        /* 2. 커스텀 스타일 (필요 시) */
+        .custom-g {
+            text-transform: lowercase !important; /* g 소문자 강제 */
+        }
+   
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900">
@@ -17,7 +48,6 @@
    <nav class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50">
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
         <div class="flex items-center space-x-2 cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-            <span class="text-2xl font-bold text-blue-800">GP</span>
             <span class="text-xl font-semibold tracking-tight text-slate-700">GLORYPAPER</span>
         </div>
         
@@ -54,11 +84,11 @@
             <div class="flex flex-col md:flex-row gap-12 items-center">
                 <div class="md:w-1/2">
                     <h2 class="text-blue-600 font-bold mb-2">인사말</h2>
-                    <h3 class="text-3xl font-bold mb-6 italic text-slate-800 leading-snug text-balance">
-                        "고객님의 비즈니스 가치를 한 단계 높이는 든든한 위생 파트너가 되겠습니다."
+                    <h3 class="text-2xl font-bold mb-6 italic text-slate-800 leading-snug text-balance">
+                        "환경 부담은 줄이고 사용 만족도는 높였습니다. <br> 스마트한 기업의 똑똑한 선택."
                     </h3>
                     <p class="text-slate-600 leading-relaxed mb-6">
-                        영광제지는 끊임없는 혁신과 품질 향상을 통해 급변하는 비즈니스 환경 속에서 '위생', '경제성', '지속 가능성'이라는 세 가지 핵심 가치를 바탕으로 건강하고 쾌적한 환경을 조성합니다.
+                        영광제지는 끊임없는 혁신과 품질 향상을 통해 급변하는 비즈니스 환경 속에서 <br>'위생', '경제성', '지속 가능성'이라는 세 가지 핵심 가치를 바탕으로 건강하고 쾌적한 환경을 조성합니다.
                     </p>
                 </div>
                 <div class="md:w-1/2 grid grid-cols-2 gap-4">
@@ -129,7 +159,8 @@
                         <tr class="bg-slate-900 text-white font-medium uppercase text-sm">
                             <th class="py-4 px-6 border-b">제품명 (모델) </th>
                             <th class="py-4 px-6 border-b">원료</th>
-                            <th class="py-4 px-6 border-b">규격 (W x L)</th>
+                            <th class="py-4 px-6 border-b">규격(W x L) / 평량(<span class="lowercase">g</span>/㎡)
+</th>
                             <th class="py-4 px-6 border-b">포장 단위</th>
                             <th class="py-4 px-6 border-b text-center">특징</th>
                         </tr>
@@ -138,21 +169,21 @@
                         <tr class="hover:bg-slate-50 border-b">
                             <td class="py-4 px-6 font-bold text-slate-800">좋은느낌 핸드타올</td>
                             <td class="py-4 px-6">무형광펄프</td>
-                            <td class="py-4 px-6">210mm x 200mm</td>
+                            <td class="py-4 px-6">210mm x 200mm / 18.5</td>
                             <td class="py-4 px-6">16팩 / 박스</td>
                             <td class="py-4 px-6 text-center">부드러운 감촉</td>
                         </tr>
                         <tr class="hover:bg-slate-50 border-b">
                             <td class="py-4 px-6 font-bold text-slate-800">좋은느낌 점보롤 300M(2겹)</td>
-                            <td class="py-4 px-6">펄프 [cite: 80]</td>
-                            <td class="py-4 px-6">95mm x 95mm </td>
+                            <td class="py-4 px-6">펄프</td>
+                            <td class="py-4 px-6">95mm x 95mm / 15.5 </td>
                             <td class="py-4 px-6">16롤 / 박스 </td>
                             <td class="py-4 px-6 text-center">강한 내구성</td>
                         </tr>
                         <tr class="hover:bg-slate-50 border-b">
                             <td class="py-4 px-6 font-bold text-slate-800">좋은느낌 점보롤 500M(1겹)</td>
                             <td class="py-4 px-6">펄프 </td>
-                            <td class="py-4 px-6">95mm x 95mm </td>
+                            <td class="py-4 px-6">95mm x 95mm / 21 </td>
                             <td class="py-4 px-6">16롤 / 박스 </td>
                             <td class="py-4 px-6 text-center">고급 시설 적합</td>
                         </tr>
