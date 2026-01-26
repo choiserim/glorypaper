@@ -1,183 +1,200 @@
-/* <!DOCTYPE html> */
+<!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> glorypaper| 구름처럼 부드러운 화장지</title>
+    <title>영광제지(GLORYPAPER) - 프로페셔널 위생 솔루션</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        /* 기본 스타일 */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Pretendard', -apple-system, sans-serif; line-height: 1.6; color: #333; background-color: #f9f9f9; }
-        a { text-decoration: none; color: inherit; cursor: pointer; }
-        ul { list-style: none; }
-
-        /* 헤더 & 네비게이션 */
-        header { background: #fff; padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #eee; }
-        .logo { font-size: 24px; font-weight: bold; color: #4A90E2; cursor: pointer; }
-        nav ul { display: flex; gap: 30px; }
-        nav ul li a { font-weight: 500; transition: 0.3s; }
-        nav ul li a: hover, nav ul li a.active { color: #4A90E2; font-weight: bold; }
-
-        /* 섹션 공통 스타일 */
-        section { display: none; padding: 80px 5%; min-height: 80vh; }
-        section.active { display: block; animation: fadeIn 0.5s ease-in-out; }
-        h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; color: #222; }
-
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-
-        /* 홈 섹션 전용 스타일 */
-        .hero { background: linear-gradient(135deg, #e0f2ff 0%, #ffffff 100%); text-align: center; padding: 100px 5%; }
-        .hero h1 { font-size: 3rem; margin-bottom: 20px; }
-        .btn { background: #4A90E2; color: #fff; padding: 15px 40px; border-radius: 30px; display: inline-block; font-weight: bold; margin-top: 20px; }
-
-        /* 제품소개 그리드 */
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
-        .product-card { background: #fff; border: 1px solid #eee; border-radius: 15px; overflow: hidden; text-align: center; padding-bottom: 20px; transition: 0.3s; }
-        .product-card:hover { transform: translateY(-10px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
-        .product-img { height: 200px; background: #f0f4f8; margin-bottom: 15px; display: flex; align-items: center; justify-content: center; color: #999; }
-
-        /* 공지사항 테이블 */
-        .notice-table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 10px; overflow: hidden; }
-        .notice-table th, .notice-table td { padding: 15px; border-bottom: 1px solid #eee; text-align: left; }
-        .notice-table th { background: #f4f7fa; color: #555; }
-        .notice-table tr:hover { background: #fdfdfd; }
-
-        /* 고객지원 폼 */
-        .support-container { max-width: 600px; margin: 0 auto; background: #fff; padding: 40px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
-        .form-group { margin-bottom: 20px; }
-        .form-group label { display: block; margin-bottom: 5px; font-weight: bold; }
-        .form-group input, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; }
-        .submit-btn { width: 100%; background: #4A90E2; color: #fff; border: none; padding: 15px; border-radius: 5px; font-size: 1rem; cursor: pointer; }
-
-        /* 푸터 */
-        footer { background: #333; color: #fff; padding: 50px 5%; text-align: center; font-size: 0.9rem; }
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+        body { font-family: 'Noto Sans KR', sans-serif; scroll-behavior: smooth; }
+        .product-card:hover { transform: translateY(-5px); transition: all 0.3s; }
     </style>
 </head>
-<body>
+<body class="bg-slate-50 text-slate-900">
 
-    <header>
-        <div class="logo" onclick="showSection('home')">glorypaper</div>
-        <nav>
-            <ul>
-                <li><a onclick="showSection('home')" id="nav-home" class="active">홈</a></li>
-                <li><a onclick="showSection('products')" id="nav-products">제품소개</a></li>
-                <li><a onclick="showSection('notice')" id="nav-notice">공지사항</a></li>
-                <li><a onclick="showSection('support')" id="nav-support">고객지원</a></li>
-            </ul>
-        </nav>
+   <nav class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center space-x-2 cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+            <span class="text-2xl font-bold text-blue-800">GP</span>
+            <span class="text-xl font-semibold tracking-tight text-slate-700">GLORYPAPER</span>
+        </div>
+        
+        <div class="hidden md:flex space-x-8 font-medium">
+            <a href="#about" class="hover:text-blue-600 transition">회사소개</a>
+            <a href="#products" class="hover:text-blue-600 transition">전체 제품</a>
+            <a href="#specs" class="hover:text-blue-600 transition">상세 사양</a>
+            <a href="#contact" class="hover:text-blue-600 transition">고객 센터</a>
+        </div>
+        <a href="tel:010-7671-3331" class="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition">
+            문의하기
+        </a>
+    </div>
+</nav>
+
+    <header class="relative bg-blue-900 h-[500px] flex items-center overflow-hidden">
+        <div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/clean-gray-paper.png')]"></div>
+        <div class="container mx-auto px-6 relative z-10 text-white">
+            <p class="text-blue-300 font-medium mb-2">더 깨끗한 공간, 더 스마트한 선택</p>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                프로페셔널 위생 솔루션
+            </h1>
+            <p class="text-lg md:text-xl text-slate-200 max-w-2xl mb-8">
+                혁신적인 핸드타월 & 점보롤로 귀사의 위생 기준을 한 단계 높여드립니다.
+            </p>
+            <a href="#products" class="bg-white text-blue-900 px-8 py-3 rounded-lg font-bold hover:bg-slate-100 transition">
+                제품 보기
+            </a>
+        </div>
     </header>
 
-    <section id="home" class="active">
-        <div class="hero">
-            <h1>구름처럼 부드러운<br>우리 집 안심 화장지</h1>
-            <p>100% 천연 펄프로 완성한 프리미엄의 차이를 느껴보세요.</p>
-            <a onclick="showSection('products')" class="btn">제품 보러가기</a>
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row gap-12 items-center">
+                <div class="md:w-1/2">
+                    <h2 class="text-blue-600 font-bold mb-2">인사말</h2>
+                    <h3 class="text-3xl font-bold mb-6 italic text-slate-800 leading-snug text-balance">
+                        "고객님의 비즈니스 가치를 한 단계 높이는 든든한 위생 파트너가 되겠습니다."
+                    </h3>
+                    <p class="text-slate-600 leading-relaxed mb-6">
+                        영광제지는 끊임없는 혁신과 품질 향상을 통해 급변하는 비즈니스 환경 속에서 '위생', '경제성', '지속 가능성'이라는 세 가지 핵심 가치를 바탕으로 건강하고 쾌적한 환경을 조성합니다.
+                    </p>
+                </div>
+                <div class="md:w-1/2 grid grid-cols-2 gap-4">
+                    <div class="bg-slate-50 p-6 rounded-xl border-l-4 border-blue-500">
+                        <h4 class="font-bold text-blue-800 mb-2">최상의 위생</h4>
+                        <p class="text-sm text-slate-500">탁월한 위생 수준 보장</p>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-xl border-l-4 border-green-500">
+                        <h4 class="font-bold text-green-800 mb-2">혁신적인 경제성</h4>
+                        <p class="text-sm text-slate-500">운영 경제성 극대화</p>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-xl border-l-4 border-orange-500">
+                        <h4 class="font-bold text-orange-800 mb-2">지속적인 성장</h4>
+                        <p class="text-sm text-slate-500">미래 위생 표준 제시</p>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-xl border-l-4 border-emerald-500">
+                        <h4 class="font-bold text-emerald-800 mb-2">환경적 책임</h4>
+                        <p class="text-sm text-slate-500">친환경 공정 및 기여</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="products">
-        <h2>제품소개</h2>
-        <div class="product-grid">
-            <div class="product-card">
-                <div class="product-img">3겹 클래식 이미지</div>
-                <h3>클래식 3겹 30롤</h3>
-                <p>매일 쓰는 실속형 타입</p>
-                <p style="color:#4A90E2; font-weight:bold;">25,900원</p>
+    <section id="products" class="py-20 bg-slate-100">
+        <div class="container mx-auto px-6 text-center mb-12">
+            <h2 class="text-3xl font-bold text-slate-800 mb-4">주요 제품 라인업</h2>
+            <p class="text-slate-500">당사는 고품질 원료를 사용하여 다양한 시설에 최적화된 위생 솔루션을 제안합니다.</p>
+        </div>
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-8">
+            <div class="product-card bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
+                <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mb-6 text-2xl">
+                    <i class="fas fa-hand-paper"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">핸드타올</h3>
+                <p class="text-slate-600 mb-6 leading-relaxed">
+                    뛰어난 흡수력과 부드러움은 물론, 엄격한 품질 관리를 거쳐 생산되는 위생적인 손 건조 솔루션입니다.
+                </p>
+                <div class="space-y-3 text-sm text-slate-500">
+                    <p><i class="fas fa-check text-blue-500 mr-2"></i> 세균 번식 억제 (강력한 흡수력)</p>
+                    <p><i class="fas fa-check text-blue-500 mr-2"></i> 피부 자극 없는 부드러움</p>
+                    <p><i class="fas fa-check text-blue-500 mr-2"></i> 인터폴드, 점보 폴드 등 라인업 보유</p>
+                </div>
             </div>
-            <div class="product-card">
-                <div class="product-img">프리미엄 코튼 이미지</div>
-                <h3>프리미엄 소프트 코튼</h3>
-                <p>먼지 없는 극강의 부드러움</p>
-                <p style="color:#4A90E2; font-weight:bold;">32,000원</p>
-            </div>
-            <div class="product-card">
-                <div class="product-img">친환경 뱀부 이미지</div>
-                <h3>에코 뱀부(대나무)</h3>
-                <p>자연에서 온 무표백 화장지</p>
-                <p style="color:#4A90E2; font-weight:bold;">29,800원</p>
+            <div class="product-card bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
+                <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-6 text-2xl">
+                    <i class="fas fa-toilet-paper"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">점보롤</h3>
+                <p class="text-slate-600 mb-6 leading-relaxed">
+                    넉넉한 길이와 뛰어난 내구성으로 잦은 교체의 번거로움을 줄여주어 대형 오피스 및 산업 시설에 최적입니다.
+                </p>
+                <div class="space-y-3 text-sm text-slate-500">
+                    <p><i class="fas fa-check text-green-500 mr-2"></i>  대용량으로 구매 및 관리비용 절감</p>
+                    <p><i class="fas fa-check text-green-500 mr-2"></i>  비접촉식 디스펜서 호환 (위생 증대)</p>
+                    <p><i class="fas fa-check text-green-500 mr-2"></i>  관리 인력 운용의 효율성 증대</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="notice">
-        <h2>공지사항</h2>
-        <table class="notice-table">
-            <thead>
-                <tr>
-                    <th width="10%">번호</th>
-                    <th>제목</th>
-                    <th width="20%">날짜</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>3</td>
-                    <td>[이벤트] 신규 가입 시 3,000원 할인 쿠폰 증정</td>
-                    <td>2024-05-20</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>설 연휴 배송 일정 안내</td>
-                    <td>2024-02-05</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>SoftCloud 공식 홈페이지 오픈 안내</td>
-                    <td>2024-01-01</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-
-    <section id="support">
-        <h2>고객지원</h2>
-        <div class="support-container">
-            <div class="form-group">
-                <label>이름</label>
-                <input type="text" placeholder="성함을 입력하세요">
+    <section id="specs" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12"> 제품 사양 및 규격</h2>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse min-w-[800px]">
+                    <thead>
+                        <tr class="bg-slate-900 text-white font-medium uppercase text-sm">
+                            <th class="py-4 px-6 border-b">제품명 (모델) </th>
+                            <th class="py-4 px-6 border-b">원료</th>
+                            <th class="py-4 px-6 border-b">규격 (W x L)</th>
+                            <th class="py-4 px-6 border-b">포장 단위</th>
+                            <th class="py-4 px-6 border-b text-center">특징</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-slate-600 text-sm">
+                        <tr class="hover:bg-slate-50 border-b">
+                            <td class="py-4 px-6 font-bold text-slate-800">좋은느낌 핸드타올</td>
+                            <td class="py-4 px-6">무형광펄프</td>
+                            <td class="py-4 px-6">210mm x 200mm</td>
+                            <td class="py-4 px-6">16팩 / 박스</td>
+                            <td class="py-4 px-6 text-center">부드러운 감촉</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50 border-b">
+                            <td class="py-4 px-6 font-bold text-slate-800">좋은느낌 점보롤 300M(2겹)</td>
+                            <td class="py-4 px-6">펄프 [cite: 80]</td>
+                            <td class="py-4 px-6">95mm x 95mm </td>
+                            <td class="py-4 px-6">16롤 / 박스 </td>
+                            <td class="py-4 px-6 text-center">강한 내구성</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50 border-b">
+                            <td class="py-4 px-6 font-bold text-slate-800">좋은느낌 점보롤 500M(1겹)</td>
+                            <td class="py-4 px-6">펄프 </td>
+                            <td class="py-4 px-6">95mm x 95mm </td>
+                            <td class="py-4 px-6">16롤 / 박스 </td>
+                            <td class="py-4 px-6 text-center">고급 시설 적합</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            <div class="form-group">
-                <label>문의유형</label>
-                <select style="width:100%; padding:12px; border:1px solid #ddd; border-radius:5px;">
-                    <option>배송문의</option>
-                    <option>제품문의</option>
-                    <option>교환/반품문의</option>
-                    <option>기타</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label>문의내용</label>
-                <textarea rows="5" placeholder="문의하실 내용을 상세히 적어주세요"></textarea>
-            </div>
-            <button class="submit-btn">문의하기 접수</button>
         </div>
     </section>
 
-    <footer>
-        <p>영광제지 | 사업자등록번호:</p>
-        <p>고객센터:  (평일 09:00 ~ 18:00)</p>
-        <div style="margin-top:10px; opacity:0.6;">©glorypaper. All rights reserved.</div>
+    <section id="contact" class="py-20 bg-blue-900 text-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12">
+            
+                <div class="bg-white p-8 rounded-2xl text-slate-800">
+                    <h3 class="text-xl font-bold mb-6">구매 및 견적 문의</h3>
+                    <div class="space-y-4 mb-8">
+                        <div class="flex justify-between border-b pb-2">
+                            <span class="text-slate-500 text-sm">대표번호 </span>
+                            <span class="font-medium text-blue-700">010-7671-3331</span>
+                        </div>
+                        <div class="flex justify-between border-b pb-2">
+                            <span class="text-slate-500 text-sm">이메일</span>
+                            <span class="font-medium">glorypaper@naver.com</span>
+                        </div>
+                    </div>
+                    <a href="mailto:glorypaper@naver.com" class="w-full bg-blue-600 text-white block text-center py-3 rounded-lg font-bold hover:bg-blue-700 transition">
+                        이메일 문의하기
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 py-12 text-slate-500 text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="text-white text-xl font-bold mb-4">GLORYPAPER</h2>
+            <p class="text-sm mb-6 max-w-lg mx-auto italic">
+                "단순히 제품을 판매하는 것을 넘어, 고객님의 비즈니스 가치를 높이는 든든한 위생 파트너가 되겠습니다."
+            </p>
+            <p class="text-xs">&copy; 2026 영광제지(GLORYPAPER). All Rights Reserved.</p>
+        </div>
     </footer>
 
-    <script>
-        function showSection(sectionId) {
-            // 모든 섹션 숨기기
-            const sections = document.querySelectorAll('section');
-            sections.forEach(sec => sec.classList.remove('active'));
-
-            // 모든 네비게이션 링크 비활성화
-            const navLinks = document.querySelectorAll('nav ul li a');
-            navLinks.forEach(link => link.classList.remove('active'));
-
-            // 선택한 섹션 보여주기
-            document.getElementById(sectionId).classList.add('active');
-
-            // 선택한 네비게이션 활성화
-            document.getElementById('nav-' + sectionId).classList.add('active');
-
-            // 페이지 상단으로 스크롤 이동
-            window.scrollTo(0, 0);
-        }
-    </script>
 </body>
 </html>
