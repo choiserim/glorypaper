@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,25 +9,38 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
-        body { font-family: 'Noto Sans KR', sans-serif; scroll-behavior: smooth; }
-        .product-card:hover { transform: translateY(-5px); transition: all 0.3s; }
-       
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s;
+        }
+
         /* 1. 웹브라우저 설정 초기화 (CSS Reset) */
-        *, *::before, *::after {
+        *,
+        *::before,
+        *::after {
             margin: 0;
             padding: 0;
-            box-sizing: border-box; /* 패딩/테두리가 너비에 포함되도록 설정 */
+            box-sizing: border-box;
+            /* 패딩/테두리가 너비에 포함되도록 설정 */
         }
-        
+
         html {
-            -webkit-text-size-adjust: 100%; /* iOS 폰트 크기 자동 조정 방지 */
+            -webkit-text-size-adjust: 100%;
+            /* iOS 폰트 크기 자동 조정 방지 */
             tab-size: 4;
         }
 
         body {
             line-height: 1.5;
             font-family: system-ui, -apple-system, sans-serif;
-            -webkit-font-smoothing: antialiased; /* 글꼴 매끄럽게 처리 */
+            -webkit-font-smoothing: antialiased;
+            /* 글꼴 매끄럽게 처리 */
         }
 
         /* 테이블 초기화 */
@@ -38,33 +52,38 @@
 
         /* 2. 커스텀 스타일 (필요 시) */
         .custom-g {
-            text-transform: lowercase !important; /* g 소문자 강제 */
+            text-transform: lowercase !important;
+            /* g 소문자 강제 */
         }
-   
     </style>
 </head>
+
 <body class="bg-slate-50 text-slate-900">
 
-   <nav class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50">
-    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-        <div class="flex items-center space-x-2 cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-            <span class="text-xl font-semibold tracking-tight text-slate-700">GLORYPAPER</span>
+    <nav class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2 cursor-pointer"
+                onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                <span class="text-xl font-semibold tracking-tight text-slate-700">GLORYPAPER</span>
+            </div>
+
+            <div class="hidden md:flex space-x-8 font-medium">
+                <a href="#about" class="hover:text-blue-600 transition">인사말</a>
+                <a href="#products" class="hover:text-blue-600 transition">전체 제품</a>
+                <a href="#specs" class="hover:text-blue-600 transition">상세 사양</a>
+                <a href="#contact" class="hover:text-blue-600 transition">고객 센터</a>
+            </div>
+            <a href="tel:010-7671-3331"
+                class="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition">
+                문의하기
+            </a>
         </div>
-        
-        <div class="hidden md:flex space-x-8 font-medium">
-            <a href="#about" class="hover:text-blue-600 transition">인사말</a>
-            <a href="#products" class="hover:text-blue-600 transition">전체 제품</a>
-            <a href="#specs" class="hover:text-blue-600 transition">상세 사양</a>
-            <a href="#contact" class="hover:text-blue-600 transition">고객 센터</a>
-        </div>
-        <a href="tel:010-7671-3331" class="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition">
-            문의하기
-        </a>
-    </div>
-</nav>
+    </nav>
 
     <header class="relative bg-blue-900 h-[500px] flex items-center overflow-hidden">
-        <div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/clean-gray-paper.png')]"></div>
+        <div
+            class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/clean-gray-paper.png')]">
+        </div>
         <div class="container mx-auto px-6 relative z-10 text-white">
             <p class="text-blue-300 font-medium mb-2">더 깨끗한 공간, 더 스마트한 선택</p>
             <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
@@ -73,7 +92,8 @@
             <p class="text-lg md:text-xl text-slate-200 max-w-2xl mb-8">
                 혁신적인 핸드타월 & 점보롤로 귀사의 위생 기준을 한 단계 높여드립니다.
             </p>
-            <a href="#products" class="bg-white text-blue-900 px-8 py-3 rounded-lg font-bold hover:bg-slate-100 transition">
+            <a href="#products"
+                class="bg-white text-blue-900 px-8 py-3 rounded-lg font-bold hover:bg-slate-100 transition">
                 제품 보기
             </a>
         </div>
@@ -88,7 +108,8 @@
                         "환경 부담은 줄이고 사용 만족도는 높였습니다. <br> 스마트한 기업의 똑똑한 선택."
                     </h3>
                     <p class="text-1x1 font-bold mb-6 italic text-slate-600 leading-relaxed mb-6">
-                        영광제지는 끊임없는 혁신과 품질 향상을 통해 급변하는 비즈니스 환경 속에서 '위생', '경제성', <br>'지속 가능성'이라는 세 가지 핵심 가치를 바탕으로 건강하고 쾌적한 환경을 조성합니다.
+                        영광제지는 끊임없는 혁신과 품질 향상을 통해 급변하는 비즈니스 환경 속에서 '위생', '경제성', <br>'지속 가능성'이라는 세 가지 핵심 가치를 바탕으로 건강하고 쾌적한
+                        환경을 조성합니다.
                     </p>
                 </div>
                 <div class="md:w-1/2 grid grid-cols-2 gap-4">
@@ -120,7 +141,8 @@
         </div>
         <div class="container mx-auto px-6 grid md:grid-cols-2 gap-8">
             <div class="product-card bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
-                <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mb-6 text-2xl">
+                <div
+                    class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mb-6 text-2xl">
                     <i class="fas fa-hand-paper"></i>
                 </div>
                 <h3 class="text-2xl font-bold mb-4">핸드타올</h3>
@@ -134,7 +156,8 @@
                 </div>
             </div>
             <div class="product-card bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
-                <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-6 text-2xl">
+                <div
+                    class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-6 text-2xl">
                     <i class="fas fa-toilet-paper"></i>
                 </div>
                 <h3 class="text-2xl font-bold mb-4">점보롤</h3>
@@ -142,9 +165,9 @@
                     넉넉한 길이와 뛰어난 내구성으로 잦은 교체의 번거로움을 줄여주어 대형 오피스 및 산업 시설에 최적입니다.
                 </p>
                 <div class="space-y-3 text-sm text-slate-500">
-                    <p><i class="fas fa-check text-green-500 mr-2"></i>  대용량으로 구매 및 관리비용 절감</p>
-                    <p><i class="fas fa-check text-green-500 mr-2"></i>  비접촉식 디스펜서 호환 (위생 증대)</p>
-                    <p><i class="fas fa-check text-green-500 mr-2"></i>  관리 인력 운용의 효율성 증대</p>
+                    <p><i class="fas fa-check text-green-500 mr-2"></i> 대용량으로 구매 및 관리비용 절감</p>
+                    <p><i class="fas fa-check text-green-500 mr-2"></i> 비접촉식 디스펜서 호환 (위생 증대)</p>
+                    <p><i class="fas fa-check text-green-500 mr-2"></i> 관리 인력 운용의 효율성 증대</p>
                 </div>
             </div>
         </div>
@@ -160,7 +183,7 @@
                             <th class="py-4 px-6 border-b">제품명 (모델) </th>
                             <th class="py-4 px-6 border-b">원료</th>
                             <th class="py-4 px-6 border-b">규격(W x L) / 평량(<span class="lowercase">g</span>/㎡)
-</th>
+                            </th>
                             <th class="py-4 px-6 border-b">포장 단위</th>
                             <th class="py-4 px-6 border-b text-center">특징</th>
                         </tr>
@@ -196,7 +219,7 @@
     <section id="contact" class="py-20 bg-blue-900 text-white">
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-2 gap-12">
-            
+
                 <div class="bg-white p-8 rounded-2xl text-slate-800">
                     <h3 class="text-xl font-bold mb-6">구매 및 견적 문의</h3>
                     <div class="space-y-4 mb-8">
@@ -209,7 +232,8 @@
                             <span class="font-medium">glorypaper@naver.com</span>
                         </div>
                     </div>
-                    <a href="mailto:glorypaper@naver.com" class="w-full bg-blue-600 text-white block text-center py-3 rounded-lg font-bold hover:bg-blue-700 transition">
+                    <a href="mailto:glorypaper@naver.com"
+                        class="w-full bg-blue-600 text-white block text-center py-3 rounded-lg font-bold hover:bg-blue-700 transition">
                         이메일 문의하기
                     </a>
                 </div>
@@ -220,12 +244,18 @@
     <footer class="bg-slate-900 py-12 text-slate-500 text-center">
         <div class="container mx-auto px-6">
             <h2 class="text-white text-xl font-bold mb-4">GLORYPAPER</h2>
-            <p class="text-sm mb-6 max-w-lg mx-auto italic">
+            <p class="text-sm mb-6 max-w-none mx-auto italic text-center text-slate-500">
                 "단순히 제품을 판매하는 것을 넘어, 고객님의 비즈니스 가치를 높이는 든든한 위생 파트너가 되겠습니다."
             </p>
-            <p class="text-xs">&copy; 2026 영광제지(GLORYPAPER). All Rights Reserved.</p>
+            <p class="text-sm mb-6 max-w-none mx-auto italic text-center text-slate-500">
+                대표자 : 이지혜 | 사업자등록번호 : 299-81-02999 | 주소 : 충청남도 아산시 둔포면 이화서길 1, 1동
+            </p>
+
+
+            <p class="text-xs">&copy; 2025 영광제지(GLORYPAPER). All Rights Reserved.</p>
         </div>
     </footer>
 
 </body>
+
 </html>
